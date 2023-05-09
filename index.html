@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <style>
+    .attribution {  text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  
+</head>
+<body>
+  <main>
+  <img src="./images/logo.svg" class="logo-img" alt="Logo image">
+  <picture>
+    <source media="(max-width: 1150px)" srcset="./images/hero-mobile.jpg">
+    <img src="./images/hero-desktop.jpg" class="hero-img" alt="Hero image">
+  </picture>
+  
+  <h1 class="header">WE'RE <span class="header-bold">COMING SOON</span></h1>
+
+  <p class="header-text">Hello fellow shoppers! We're currently building our new fashion store. 
+    Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+  <div class="input-container">
+    <input type="email" placeholder="Email Address" id="email-input"  onfocus="clearErrors()" >
+      <div class="error-image-container" id="error-image-container">
+        <img src="./images/icon-error.svg" alt="Error icon">
+      </div>
+      <div class="input-image-container" onclick="handleClick()">
+        <img src="./images/icon-arrow.svg" alt="Arrow Icon">
+      </div>
+    </input>
+  </div>  
+  <p class="error-message" id="error-message">Please provide a valid email</p>
+</main>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/aveandrian">aveandrian</a>.
+    </p>
+  </footer>
+  <script>
+    function handleClick(){
+      let emailValue = document.getElementById('email-input').value;
+      if(emailValue = '' || !emailValue.includes('@') || !emailValue.includes('.')){
+        document.getElementById('error-image-container').style.visibility='visible';
+        document.getElementById('error-message').style.visibility='visible';
+      }
+    };
+    function clearErrors(){
+      document.getElementById('error-image-container').style.visibility='hidden';
+      document.getElementById('error-message').style.visibility='hidden';
+    };
+  </script>
+</body>
+</html>
