@@ -22,4 +22,4 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![image](https://github.com/aveandrian/base-apparel-coming-soon-master/assets/13519212/ebc0fb91-dafb-4310-803d-84eed5920660)
